@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ae7d5e18-ac62-4bd3-ab9e-02cbb2eb29d6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowTabs</RootNamespace>
+    <AssemblyName>WindowTabs</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <Name>WtProgram</Name>
+    <TargetFrameworkProfile />
+    <SccProjectName>&lt;Project Location In Database&gt;</SccProjectName>
+    <SccProvider>Mercurial Source Control Package</SccProvider>
+    <SccAuxPath>&lt;Source Control Database&gt;</SccAuxPath>
+    <SccLocalPath>&lt;Local Binding Root of Project&gt;</SccLocalPath>
+    <Win32Resource>.\app.res</Win32Resource>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <Tailcalls>false</Tailcalls>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <WarningLevel>3</WarningLevel>
+    <NoWarn>0040,0058,0046,0760,1183</NoWarn>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <StartArguments>
+    </StartArguments>
+    <OtherFlags>
+    </OtherFlags>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <Tailcalls>true</Tailcalls>
+    <OutputPath>bin\Release</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <WarningLevel>3</WarningLevel>
+    <OtherFlags>--standalone --staticlink:Win32   --staticlink:Newtonsoft.Json --staticlink:Aga.Controls --staticlink:Interop.SHDocVw --staticlink:Interop.Shell32</OtherFlags>
+    <NoWarn>0058,2009,0760,1183, 0046</NoWarn>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\FSharp\1.0\Microsoft.FSharp.Targets" Condition="!Exists('$(MSBuildToolsPath)\Microsoft.Build.Tasks.v4.0.dll')" />
+  <Import Project="$(MSBuildExtensionsPath32)\..\Microsoft F#\v4.0\Microsoft.FSharp.Targets" Condition="Exists('$(MSBuildToolsPath)\Microsoft.Build.Tasks.v4.0.dll')" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Shared/Operators.fs" />
+    <Compile Include="Shared/Dynamic.fs" />
+    <Compile Include="Shared/Observable.fs" />
+    <Compile Include="Shared/Blackboard.fs" />
+    <Compile Include="Shared/Invoker.fs" />
+    <Compile Include="Shared/Cell.fs" />
+    <Compile Include="Shared/Drawing.fs" />
+    <Compile Include="Shared/Sprite.fs" />
+    <Compile Include="Shared\TabStripTypes.fs" />
+    <Compile Include="Shared/Win32.fs" />
+    <Compile Include="Shared\ProgramTypes.fs" />
+    <Compile Include="Shared/DragDrop.fs" />
+    <Compile Include="Shared/Serialize.fs" />
+    <Compile Include="Shared/Win32Menu.fs" />
+    <Compile Include="Shared/Services.fs" />
+    <Compile Include="Shared/AnimationWindow.fs" />
+    <Compile Include="Shared/Forms.fs" />
+    <Compile Include="Shared/Json.fs" />
+    <Compile Include="Shared/Shell.fs" />
+    <Compile Include="Shared/Model.fs" />
+    <Compile Include="Shared\UIHelper.fs" />
+    <Compile Include="HotKeyManager.fs" />
+    <Compile Include="DragDropController.fs" />
+    <Compile Include="TabStripSprite.fs" />
+    <Compile Include="TabStrip.fs" />
+    <Compile Include="Settings.fs" />
+    <Compile Include="TaskSwitch.fs" />
+    <Compile Include="WindowDecorator.fs" />
+    <Compile Include="OleDropTarget.fs" />
+    <Compile Include="WindowGroup.fs" />
+    <Compile Include="TabStripDecorator.fs" />
+    <Compile Include="GroupPlugins/SuperBarPlugin.fs" />
+    <Compile Include="GroupPlugins/MouseScrollPlugin.fs" />
+    <Compile Include="GroupPlugins/NumericTabHotKeyPlugin.fs" />
+    <Compile Include="GroupPlugins/HideTabsOnInactiveGroupPlugin.fs" />
+    <Compile Include="Desktop.fs" />
+    <Compile Include="Launcher.fs" />
+    <Compile Include="Workspace\WorkspaceModel.fs" />
+    <Compile Include="Workspace\WorkspaceView.fs" />
+    <Compile Include="ManagerViewService\Views\AppearanceView.fs" />
+    <Compile Include="ManagerViewService\Views\BehaviorView.fs" />
+    <Compile Include="ManagerViewService\Views\DiagnosticsView.fs" />
+    <Compile Include="ManagerViewService\Views\LicenseView.fs" />
+    <Compile Include="ManagerViewService\Views\ProgramView.fs" />
+    <Compile Include="ManagerViewService\DesktopManagerForm.fs" />
+    <Compile Include="ManagerViewService\ManagerViewService.fs" />
+    <Compile Include="FilterService.fs" />
+    <Compile Include="DesktopPlugins/InputManagerPlugin.fs" />
+    <Compile Include="DesktopPlugins/NotifyIconPlugin.fs" />
+    <Compile Include="DesktopPlugins/ExceptionHandlerPlugin.fs" />
+    <Compile Include="Program.fs" />
+    <EmbeddedResource Include="Resources\Bemo.ico" />
+    <EmbeddedResource Include="Resources\workspace.png" />
+    <EmbeddedResource Include="Resources\add.png" />
+    <EmbeddedResource Include="Resources\delete.png" />
+    <EmbeddedResource Include="Resources\edit.ico" />
+    <EmbeddedResource Include="Resources\edit.png" />
+    <EmbeddedResource Include="Resources\group.png" />
+    <EmbeddedResource Include="Resources\group-closed.png" />
+    <EmbeddedResource Include="Resources\restore.png" />
+    <EmbeddedResource Include="Resources\window.png" />
+    <None Include="App.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Aga.Controls">
+      <HintPath>..\Aga.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="FSharp.PowerPack, Version=2.0.0.0, Culture=neutral, PublicKeyToken=a19089b1c74d0809" />
+    <Reference Include="Interop.SHDocVw">
+      <HintPath>..\Interop.SHDocVw.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.Shell32">
+      <HintPath>..\Interop.Shell32.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib" />
+    <Reference Include="FSharp.Core" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <ProjectReference Include="..\Win32\Win32.csproj">
+      <Name>Win32</Name>
+      <Project>{08d5e815-cc69-4d6e-83bd-ef119618ea9c}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	     Other similar extension points exist, see Microsoft.Common.targets.
+	<Target Name="BeforeBuild">
+	</Target>
+	<Target Name="AfterBuild">
+	</Target>
+	-->
+</Project>

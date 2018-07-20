@@ -1,0 +1,21 @@
+{
+  "version": "2013.5.23",
+  "licenseKey": "",
+  "replaceAltTab": false,
+  "groupWindowsInSwitcher": false,
+  "includedPaths": [],
+  "autoGroupingPaths": [],
+  "tabAppearance": {
+    "tabHeight": 25,
+    "tabMaxWidth": 200,
+    "tabOverlap": 20,
+    "tabNormalBgColor": "9FC4F0",
+    "tabHighlightBgColor": "BDD5F4",
+    "tabActiveBgColor": "FAFCFE",
+    "tabFlashBgColor": "FFBBBB",
+    "tabBorderColor": "3A70B1",
+    "tabHeightOffset": 1,
+    "tabIndentFlipped": 80,
+    "tabIndentNormal": 3
+  }
+}
